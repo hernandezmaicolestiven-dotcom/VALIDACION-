@@ -23,3 +23,22 @@ usuario.addEventListener("input", function () {
 
     this.value = valor.replace(/[^a-zA-Z]/g, '');
 });
+
+    password.addEventListener("input", function () {
+
+    let valor = this.value;
+
+    if (valor.length <10) { 
+        this.style.border = "2px solid red";
+        mensajePassword.textContent = "contraseña debe tener 10 caracter minimo";
+        mensajePassword.style.color = "red";
+    } 
+   
+    else {
+        this.style.border = "2px solid green";
+        mensajePassword.textContent = "Contraseña válida";
+        mensajePassword.style.color = "green";
+    }
+
+   
+    });
