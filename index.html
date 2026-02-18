@@ -3,15 +3,22 @@
 
 <!-- margin bottom 3 -->
 <div class="container">
-     <div class="mb-3">
-        <label for="usuario" class="form-label">usuario:</label>
-        <input type="text" class="form-control" id="usuario"> 
-        <span id="mensaje" class="form-text"></span>
-    </div>
-    <div class="mb-3">
-        <label for="password" class="form-label">contraseña:</label>
-        <input type="password" class="form-control" id="password">
-        <span id="mensajePassword" class="form-text"></span>
-    </div>
+    <form id="formulario" novalidate>
+        <div class="mb-3">
+            <label for="usuario" class="form-label">usuario:</label>
+            <input type="text" class="form-control" id="usuario"> 
+            <span id="mensaje" class="form-text"></span>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Contraseña:</label>
+            <div class="input-group">
+                <input type="password" id="password" name="password" class="form-control" required>
+                <button type="button" id="togglePassword" class="btn btn-primary">👁</button>
+            </div>
+            <span id="mensajePassword" class="form-text"></span>
+            <div class="form-text mt-2">Caracteres: <span id="passwordCounter">0</span>/10</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
 </div>
 <script src="validacion.js"></script>
